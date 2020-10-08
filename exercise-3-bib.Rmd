@@ -7,4 +7,4 @@ output: pdf_document
 
 \section{Comments}
 
-This looks like a nice, clean and "knitable" document.
+This looks like a nice, clean and "knitable" document...
