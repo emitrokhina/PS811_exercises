@@ -1,3 +1,7 @@
+####Exercise 6 for PS811
+###Evgeniya Mitrokhia
+#16.10.2020
+
 library(tidyverse)
 
 nations <- read.csv("national.csv")
