@@ -3,10 +3,13 @@
 #Evgeniya Mitrokhina
 #23.10.2020
 
+# MS: load all packages
+
 
 ###Base R tasks
 
 #2
+# MS: name your objects with more meaningful names
 data <- read.csv("food_coded.csv")
 
 #3
@@ -70,6 +73,7 @@ names(facb_selected)
 #facebook <- facebook %>% mutate(post_type_coded = ifelse(Post.Type == "link", 1, post_type_coded))
 
 #Marcy, can you, please share the code how I can do it (would be very useful)
+# MS: check answer key :)
 
 facebook$post_type_coded <- NA
 facebook$post_type_coded[facebook$Post.Type == "link"] <- 1
@@ -92,6 +96,7 @@ summarise(facebook,
           comment_count.sd = sd(comment_count, na.rm = TRUE))
 
 #8
+# MS: check answer key
 facebook %>% 
   group_by("mainstream", Category) %>% 
   summarise(share_count.mean = mean(share_count, na.rm = TRUE),
