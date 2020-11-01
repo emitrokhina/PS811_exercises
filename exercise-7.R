@@ -6,7 +6,7 @@
 #CReating data ftrame
 new_data_just <- data.frame(Justice =  c("Clarence Thomas", "Ruth Bader Ginsburg", "Stephen Breyer", "John Roberts", 
             "Samuel Alito", "Sonia Sotomayor", "Elena Kagan", "Neil Gorsuch", "Brett Kavanaugh"),
-Sate =  c("GA", 'NY', 'MA', 'MD', 'NJ', 'NY', 'MA', 'CO', 'MD'),
+State =  c("GA", 'NY', 'MA', 'MD', 'NJ', 'NY', 'MA', 'CO', 'MD'),
 Position = c(rep("Associate Justice", 3), "Chief Justice", rep("Associate Justice", 5)),
 Replacing =  c("Thurgood Marshall", "Byron White", "Harry Blackmun", "William Rehnquist",
               "Sandra Day O’Connor", "David Souter", "John Paul Stevens", "Antonin Scalia",
@@ -21,10 +21,11 @@ Nominated_by =  c("George H.W. Bush", "Bill Clinton", "Bill Clinton", "George W.
 
 ###2
 #uploading file
-
+# ms: shouldn't this be saved as a .csv file?
 justies <- read.csv("justices.txt")
 
 ###3
+# ms: load packages at the top of your .R file
 library(foreign)
 library(dplyr)
 library(tidyverse)
@@ -45,6 +46,8 @@ table(scdb$justiceName)
 
 #It seems that inner_join is the most appropriate function, because we need to join the frames by common variable name
 combinde_justice <- inner_join(justies, scdb, by = "justiceName")
+# ms: consider this:
+# combinde_justice <- inner_join(justies, scdb, by = c("justiceName", "term")) to avoid having term.x and term.y
 
 ###4
 new <- combinde_justice %>% drop_na(post_mn)
@@ -65,7 +68,8 @@ table(combinde_justice$decisionDirection == "")
 
 subset_justice <- combinde_justice %>% filter(decisionDirection != "")
 
-
+# ms: consider using case_when() for this...
+# ms: also, the decision directions are numeric (see answer key for this)
 combinde_justice_recoded <- mutate(combinde_justice, 
          dicision_recoded = ifelse(
           decisionDirection == "conservative", 1, 0),
@@ -78,12 +82,14 @@ table(combinde_justice_recoded$dicision_recoded)
 #In the dataset there were decision type coded as "", I wasn't able to figure out why,
 #so eventually I assumed they are unspecified and recoded them as 0 as well.
 #Is it only my problem (the way I uploaded the dataset) or is it smth natural to the data?
+# ms: yes, so there are some NA variables in the dataset...I would just leave them as NA and only rescale 1, 2, and 3
 
 vote_direction <- combinde_justice_recoded %>%
   group_by(term.x) %>%
   summarise(mean = mean(dicision_recoded))
 
 ###7
+# ms: please see answer key for a cleaner way to determine whether there these scores are different/similar
 term <- vote_direction[1]
 direction <- vote_direction[2]
 mq <- mq_scores[,2]
