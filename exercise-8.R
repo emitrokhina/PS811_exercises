@@ -51,4 +51,6 @@ ggplot(USArrests, aes(UrbanPop)) +
   labs(title = "Urban Population crime frequency", y = "Frequency",  x = "Urban Population") +
   geom_histogram(binwidth = 5, color="black", fill="white")
 
+#My project
+
 
