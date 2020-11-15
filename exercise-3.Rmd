@@ -1,0 +1,49 @@
+---
+title             : "Ethnic Politics and Nationalism"
+shorttitle        : "Memo"
+
+author: 
+  - name          : "Evgeniya Mitrokhina"
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Based on the topic and after reading texts I decided distinguish the reading into two groups. The first one is about ethnicity and includes papers, that investigate the concept and what role it plays in cooperation, conflicts, and attitudes towards independence. Another category is about nationality and how it is related to people’s attitudes. I also introduce a second dimension denoting the presence of violence because some of the interactions between different ethnicities (or ethnic groups and the state) are based on some type of conflict between actors. I place Rogers and Laitin [@brubakerEthnicNationalistViolence1998] work in the middle of the table because they provide a review of the literature and more importantly emphasize the importance of disaggregating the phenome and its critical understanding.
+
+#Contributions
+As I have already mentioned Rogers and Laitin [@brubakerEthnicNationalistViolence1998] provide very comprehensive review of the literature investigating ethnic and nationalist violence. They highlight that ethnic politics and nationalism are complex things to study and emphasize the importance of critical approach to produce meaningful results. Shelef [@shelefUnequalGroundHomelands2016], in my opinion, is actually doing that by integrating the constructivist understanding of an important territory to a quantitative study of conflict. Robinson (2014) work is interesting because she is trying to investigate what identity is more important for people national or ethnic. Introducing the relative measure of national and ethnic group identification, she is able to demonstrate that African countries follow the same pattern as the rest of the world and that modernization impact on the development of national consciousness. Hierro & Didac [@hierroDivideIndependenceExplaining2020] also use survey to investigate the microlevel mechanisms of preferences for secession. They study complements the literature by providing evidence that material motivations and knowledge are also important factors for sessions preference formation. Liu [@liuLocalPublicGoods2019] in his work also pays attention to the structural factors and their role in ethnic violence. Utilizing the subnational level variation in public goods provision, he demonstrates that opportunity cost theory explains lower level of civic conflict. Hager, Krakowski and Schaub [@hagerEthnicRiotsProsocial2019] study ethnic riots as well, however, use it as an independent variable explaining prosocial behavior. Using qualitative evidence, they come to a different conclusion that exist in the literature that riots lead to trust erosion among coethnics. 
+
+#Connections
+Despite the fact that all these papers investigate similar questions, they use different methodological approaches. Robinson [@robinsonNationalEthnicIdentification2014], Hager, Krakowski, & Schaub [@hagerEthnicRiotsProsocial2019] and Hierro & Didac [@hierroDivideIndependenceExplaining2020]use survey data, that measure individuals’ attitudes. The last two papers utilize experimental design to uncover the causal relationships.
+
+
+It is also important that papers by Robinson [@robinsonNationalEthnicIdentification2014] and Shelef [@shelefUnequalGroundHomelands2016] compare different countries. While Liu [@liuLocalPublicGoods2019] and Hierro & Didac [@hierroDivideIndependenceExplaining2020] concentrate on specific regions trying to discover not only associations between variables of interest but trying to discover mechanisms that would drive the variation. 
+
+#Limitations
+Shelef [@shelefUnequalGroundHomelands2016] constructing his measure of homeland status investigating news broadcasts. While I think this is an innovative approach, it has its disadvantages because does not reflect the dynamics. Territories that are unimportant to the government are not discussed through the media.  However, the conflict between ethnicities still may exist. A concern I have about Robinson’s [@robinsonNationalEthnicIdentification2014] paper is about the relative measure. While it allows to compare the importance of ethnicity over nationality, it is impossible to investigate the strength of the identification. She also excludes Tanzania from the comparison, that might me a problem. In my opinion the author should better explore the reasons why the country might be an outlier.
+
+
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
