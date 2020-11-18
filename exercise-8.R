@@ -36,7 +36,8 @@ barplot(USArrests$Rape, main = "Number of rape arrests per state",
         xlab = "State",
         ylab = "Number of rape arrests",
         names.arg = c(USArrests$State),
-        las=2)
+        las=2
+       # cex.names = 0.5 you might want to make the text smaller so it shows all the states)
 
 ggplot(USArrests, aes(factor(State), Rape)) + 
   geom_bar(stat = 'identity') +
