@@ -104,7 +104,7 @@ newdata <- subset(newdata, age != -9)
 table(newdata$educ)
 table(newdata$empl)
 
-
+# ms: consider other ways of coding gender and race...see answer key
 ```
 
 
