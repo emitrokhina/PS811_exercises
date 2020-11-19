@@ -131,7 +131,7 @@ summary(model1)
 
 library(stargazer)
 
-stargazer(model1 , type = 'latex',
+stargazer(model1 , type = 'html',
           title = "Effect of homeownership on party contributions",
           covariate.labels = c("Gender", "Age", "Race"),
           dep.var.labels = "Party Contribution (1=GOP)",
