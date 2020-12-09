@@ -1,0 +1,23 @@
+---
+title: "exercise-10"
+author: "Evgeniya Mitrokhina"
+date: "09 12 2020"
+output: pdf_document
+---
+
+```{r packages, include = FALSE}
+library("here")
+library("haven")
+library("Rmisc")
+library("magrittr")
+library("ggplot2")
+library("broom")
+library("MASS")
+library("estimatr")
+library("modelsummary")
+library("tidyverse")
+```
+
+```{r}
+data <- read_dta("Bork.dta")
+```
