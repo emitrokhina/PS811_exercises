@@ -215,3 +215,5 @@ stargazer(table2_ccs_nominees_model2, table2_add_nominees2,
           dep.var.caption = "Senate Vote",
           dep.var.labels.include = FALSE,
           type = "text")
+
+# ms: where are the sotomayor data?
